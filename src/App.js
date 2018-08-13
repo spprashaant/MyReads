@@ -5,6 +5,8 @@ import * as BooksAPI from './BooksAPI'
 import { Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import ListBooks from './ListBooks'
+import SearchBooks from './SearchBooks'
+
 // import update from 'immutability-helper'
 
 class BooksApp extends React.Component {
@@ -39,17 +41,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
       <Route path="/search" render={() => (
-          <div className="search-books">
-           <div className="search-books-bar">
-            <Link to="/">Close</Link>
-            <div className="search-books-input-wrapper">
-                 <input type="text" placeholder="Search by title or author"/>
-            </div>
-           </div>
-           <div className="search-books-results">
-            <ol className="books-grid"></ol>
-           </div>
-          </div>
+          <SearchBooks books={this.state.books} />
            )} />
       <Route exact path="/" render={() => (
           <ListBooks handleSelectedChange={this.handleChange} books={this.state.books} />
