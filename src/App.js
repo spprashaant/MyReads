@@ -25,16 +25,14 @@ class BooksApp extends React.Component {
       })
     }
     handleChange = (book, shelf) => {
-      let newState = Object.assign({}, this.state);
-      newState.books.filter((b) => b.id === book.id)[0].shelf = shelf;
-      this.setState(newState);
-      // this.setState((state) => {
-      //   state.books.filter((b) => b.id === book.id).shelf = shelf;
-      //   books: state.books;
-      //   // let currentBooks = state.books;
-      //   // books: update(currentBooks, {currentBooks: {$set: currentBooks.filter((b) => b.id === book.id).shelf = shelf}})
-      // });
       BooksAPI.update(book, shelf);
+      BooksAPI.getAll().then((books) => {
+        this.setState({books});
+        let newState = Object.assign({}, this.state);
+        newState.books.filter((b) => b.id === book.id)[0].shelf = shelf;
+        this.setState(newState);
+      });
+      
     }
   render() {
     return (

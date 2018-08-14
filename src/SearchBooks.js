@@ -1,43 +1,33 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import escapeRegExp from 'escape-string-regexp'
 import * as BooksAPI from './BooksAPI'
 
 class SearchBooks extends Component {
 	state = {
-		query: '',
 		bookResults: []
 	}
 
 	updateQuery = (query) => {
-		//const match = new RegExp(escapeRegExp(query), 'i')
-		BooksAPI.search(query).then((books) => {
+		BooksAPI.search(query.trim()).then((books) => {
 			if(books){
         		this.setState({
-	        	bookResults: books,
-	        	query: query.trim()
+		        	bookResults: books,
 	        	});
 	    	}
 		    else{
 		    	this.setState({
 		        	bookResults: [],
-		        	query: ''
 		      	});
 		    }
 		}
+		).catch((e) => {
+			console.log(e);
+		}
+
 		)
 	}
 	render(){
-		//const {books} = this.props;
-		const {query, bookResults} = this.state;
-
-		// let bookResults
-		// if(query){
-		// 	const match = new RegExp(escapeRegExp(query), 'i')
-		// 	bookResults = books.filter((book) => (match.test(book.title)|| match.test(book.authors)))
-		// } else {
-		// 	bookResults = []
-		// }
+		const {bookResults} = this.state;
 
 		return(
 		<div className="search-books">
