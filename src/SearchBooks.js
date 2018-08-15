@@ -7,24 +7,36 @@ class SearchBooks extends Component {
 		bookResults: []
 	}
 
-	updateQuery = (query) => {
-		BooksAPI.search(query.trim()).then((books) => {
-			if(books){
-        		this.setState({
-		        	bookResults: books,
-	        	});
-	    	}
-		    else{
-		    	this.setState({
+	clearState = () => {
+		this.setState({
 		        	bookResults: [],
 		      	});
-		    }
+	}
+	updateQuery = (query) => {
+		if(!query.trim()){
+			this.clearState();
+		} else {
+			BooksAPI.search(query.trim()).then((books) => {
+				//Handle invalid query
+				if(books && books.error){
+					this.clearState();
+				}
+				else if(books){
+	        		this.setState({
+			        	bookResults: books,
+		        	});
+		    	}
+			    else{
+			    	this.clearState();
+			    }
+			}
+			).catch((e) => {
+				//Reset results in case of error
+				this.setState({
+			        	bookResults: [],
+			      	});
+			})
 		}
-		).catch((e) => {
-			console.log(e);
-		}
-
-		)
 	}
 	render(){
 		const {bookResults} = this.state;
