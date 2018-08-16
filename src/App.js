@@ -27,8 +27,11 @@ class BooksApp extends React.Component {
     handleChange = (book, shelf) => {
       BooksAPI.update(book, shelf);
       BooksAPI.getAll().then((books) => {
-        this.setState({books});
+        //this.setState({books});
         let newState = Object.assign({}, this.state);
+        if(newState.books.filter((b) => b.id === book.id).length === 0){
+          newState.books.push(book);
+        }
         newState.books.filter((b) => b.id === book.id)[0].shelf = shelf;
         this.setState(newState);
       });
@@ -38,7 +41,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
       <Route path="/search" render={() => (
-          <SearchBooks books={this.state.books} handleSelectedChange={this.handleChange} />
+          <SearchBooks addedBooks={this.state.books} handleSelectedChange={this.handleChange} />
            )} />
       <Route exact path="/" render={() => (
           <ListBooks handleSelectedChange={this.handleChange} books={this.state.books} />
