@@ -1,5 +1,7 @@
 {
+  "homepage": "http://spprashaant.github.io/MyReads",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "immutability-helper": "^2.7.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
@@ -10,6 +12,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

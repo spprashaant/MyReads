@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"adde",
+				"addedBook"
+			],
+			[
+				"added",
+				"addedBooks"
+			],
+			[
 				"Sear",
 				"SearchBooks"
 			],
@@ -47,8 +55,16 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3955,
+				"buffer_size": 1716,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/BooksAPI.js",
+			"settings":
+			{
+				"buffer_size": 1088,
 				"line_ending": "Unix"
 			}
 		},
@@ -56,7 +72,7 @@
 			"file": "src/App.js",
 			"settings":
 			{
-				"buffer_size": 1544,
+				"buffer_size": 1671,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -65,17 +81,9 @@
 			"file": "src/SearchBooks.js",
 			"settings":
 			{
-				"buffer_size": 2779,
+				"buffer_size": 3903,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/App.test.js",
-			"settings":
-			{
-				"buffer_size": 358,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -90,7 +98,16 @@
 			"file": "src/ListBooks.js",
 			"settings":
 			{
-				"buffer_size": 7085,
+				"buffer_size": 1123,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/BookShelf.js",
+			"settings":
+			{
+				"buffer_size": 2206,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -222,6 +239,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -239,7 +257,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -248,102 +266,40 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3955,
+						"buffer_size": 1716,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3955,
-								3955
+								386,
+								918
 							]
 						],
 						"settings":
 						{
+							"SL.13.region_keys":
+							[
+							],
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1088,
-								1088
-							]
-						],
-						"settings":
-						{
-							"SL.34.region_keys":
-							[
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/SearchBooks.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								521,
-								521
-							]
-						],
-						"settings":
-						{
-							"SL.92.region_keys":
-							[
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
+						"translation.y": 513.333333333,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/App.test.js",
+					"buffer": 1,
+					"file": "src/BooksAPI.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 358,
+						"buffer_size": 1088,
 						"regions":
 						{
 						},
@@ -356,16 +312,89 @@
 						],
 						"settings":
 						{
-							"SL.96.region_keys":
+							"SL.21.region_keys":
 							[
 							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1234,
+								1234
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"SL.34.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/SearchBooks.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								694,
+								694
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"SL.92.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -393,7 +422,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -402,34 +431,69 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7085,
+						"buffer_size": 1123,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								996,
-								2584
+								798,
+								798
 							]
 						],
 						"settings":
 						{
+							"SL.18.region_keys":
+							[
+							],
 							"SL.89.region_keys":
 							[
 							],
 							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
+						"translation.x": 3.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/BookShelf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"SL.22.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
 						"translation.x": 0.0,
-						"translation.y": 627.333333333,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "src/index.js",
 					"semi_transient": false,
 					"settings":
@@ -456,7 +520,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
